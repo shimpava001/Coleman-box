@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+.topbar{
+    width:auto;
+    background-color: #9C27B0;
+    height:50px;
+    box-shadow: 0 8px 6px -4px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    display:flex;
+}
+.button{
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+}
+.titan-one-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 36px;
+  margin-left: 30px;
+}
