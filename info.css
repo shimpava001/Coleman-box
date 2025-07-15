@@ -1,0 +1,42 @@
+body {
+  margin: 0;  
+}
+.topbar{
+    width:auto;
+    background-color: #9C27B0;
+    height:54px;
+    box-shadow: 0 8px 6px -4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.info-image{
+    height:36px;
+}
+.titan-one-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 36px;
+  margin-left: 30px;
+}
+@font-face {
+    font-family: "Sebino Soft Medium";
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot");
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.svg#Sebino Soft Medium")format("svg");
+}
+.text {
+    font-family: "Sebino Soft Medium", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: black;
+    font-size: 24px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
