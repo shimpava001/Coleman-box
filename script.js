@@ -4,7 +4,7 @@ var rare = ["Oven", "jjs crying Bruce", "Cinaminate", "Jarden"]
 var epic = ["Adrian", "Femboy Tucker"]
 var legendary = ["Mr.Dail"]
 var chroma = ["Singing Suvan", "Josue", "Kiwi", "The ragebaiting one"]
-var mystical = ["Qintellegence Penguin"]
+var mystic = ["Qintellegence Penguin"]
 var noclick = false;
 let hasOpened = false;
 var rarity = null;
@@ -63,12 +63,13 @@ document.getElementById("button").addEventListener("click", function() {
         document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else{
-        Rarity = "Mystical";
+        Rarity = "Mystic";
         rarity.classList.add("mystic");
         let randomblook = rng(mystic.length) - 1;
         blook = mystic[randomblook];
         document.querySelector(".name").textContent = blook;
         document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
+        document.querySelector('.blook').style.cursor = 'pointer';
     }
     document.querySelector(".rarity").textContent = Rarity;
 });
@@ -105,6 +106,7 @@ function closeModal() {
     cover.classList.remove('white');
     cover.classList.remove('enlarged');
     rarity.classList.remove('green', 'blue', 'red', 'orange', 'white', 'mystic');
+    document.querySelector('.blook').style.cursor = 'default';
     document.body.style.backgroundColor = '';
     noclick = false;
     hasOpened = false
@@ -130,4 +132,12 @@ document.body.addEventListener('click', function(e) {
   if (all.classList.contains('active') && open.classList.contains('active')) {
     closeModal();
   }
+});
+
+document.querySelector('.blook').addEventListener('click', function(e) {
+    if (Rarity === "Mystic") {
+        console.log("Blook clicked");
+        let sound = new Audio('vids/noot noot.mp3');
+        sound.play();
+    }
 });
