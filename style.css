@@ -13,6 +13,8 @@ body {
     border-radius: 4px;
     width: 275px;
     height: 275px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
 }
 .titan-one-regular {
   font-family: "Titan One", sans-serif;
@@ -56,10 +58,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 12px;
+}
+.tokens-amount{
+    font-family: "Sebino Soft Medium", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 36px;
+    margin-right: 24px;
+}
+.tokens-image {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
 }
 .top{
     display:flex;
     justify-content: center;
     align-items: center;
+}
+.all.active{
+    display: none;
 }
