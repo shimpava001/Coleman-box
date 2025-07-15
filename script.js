@@ -6,6 +6,7 @@ var legendary = ["Mr.Dail"]
 var chroma = ["Singing Suvan", "Josue", "Mr. Dipaola", "Doge Diego"]
 var mystical = ["Qintellegence penguin"]
 var noclick = false;
+let hasOpened = false;
 var rarity = null;
 
 function rng(num){ 
@@ -13,9 +14,9 @@ function rng(num){
 }
 
 document.getElementById("button").addEventListener("click", function() {
-    const market = document.querySelector('.all');
+    const all = document.querySelector('.all');
     const open = document.querySelector('.open');
-    market.classList.add('active');
+    all.classList.add('active');
     open.classList.add('active');
     document.body.style.backgroundColor = "#404350ff";
     rarity = document.querySelector(".rarity");
@@ -90,41 +91,43 @@ document.querySelector(".cover").addEventListener("click", async function() {
     await sleep(300);
     cover.classList.toggle("trans");
     noclick = false;
+    hasOpened = true;
 });
 
 function closeModal() {
-  const market = document.querySelector('.all');
-  const open = document.querySelector('.open');
-  const cover = document.querySelector('.trans');
-  market.classList.remove('active');
-  open.classList.remove('active');
-  cover.classList.remove('active');
-  document.body.style.backgroundColor = '';
-  noclick = false;
+    const rarity = document.querySelector(".rarity");
+    const all = document.querySelector('.all');
+    const open = document.querySelector('.open');
+    const cover = document.querySelector('.cover');
+    all.classList.remove('active');
+    open.classList.remove('active');
+    cover.classList.remove('trans');
+    cover.classList.remove('white');
+    cover.classList.remove('enlarged');
+    rarity.classList.remove('green', 'blue', 'red', 'orange', 'white', 'mystic');
+    document.body.style.backgroundColor = '';
+    noclick = false;
+    hasOpened = false
 }
 
 document.querySelector('.open').addEventListener('click', function (e) {
+  if (noclick || !hasOpened) return;
+
   if (e.target === this) {
     closeModal();
   }
 });
 
-// Optional: also close with ESC key
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
-});
-document.body.addEventListener('click', function(e) {
-  if (noclick) return; // Block closing while animating
 
-  const market = document.querySelector('.all');
+document.body.addEventListener('click', function(e) {
+  if (noclick || !hasOpened) return;
+
+  const all = document.querySelector('.all');
   const open = document.querySelector('.open');
 
-  // Ignore clicks on button or inside open modal
   if (e.target.closest('#button') || e.target.closest('.open')) return;
 
-  if (market.classList.contains('active') && open.classList.contains('active')) {
+  if (all.classList.contains('active') && open.classList.contains('active')) {
     closeModal();
   }
 });
