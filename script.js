@@ -1,10 +1,10 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
-var uncommon = ["Suvan bot", "Nerd Sarvesh", "Asian Andrew", "Micro Lyric", "Jawdan Jones", "Sigma phonk Adrian"]
-var rare = ["Diego the ragebaiter", "Femboy Tucker", "Feesh Oven"]
-var epic = ["jjs crying Bruce", "Cinaminanate"]
+var uncommon = ["NPC Suvan", "Nerd Sarvesh", "Asian Andrew", "Micro Lyric", "Doge-shartinum", "Julian"]
+var rare = ["Oven", "jjs crying Bruce", "Cinaminate", "Jarden"]
+var epic = ["Adrian", "Femboy Tucker"]
 var legendary = ["Mr.Dail"]
-var chroma = ["Singing Suvan", "Josue", "Mr. Dipaola", "Doge Diego"]
-var mystical = ["Qintellegence penguin"]
+var chroma = ["Singing Suvan", "Josue", "Kiwi", "The ragebaiting one"]
+var mystical = ["Qintellegence Penguin"]
 var noclick = false;
 let hasOpened = false;
 var rarity = null;
@@ -28,7 +28,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(uncommon.length) - 1;
         blook = uncommon[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else if (randomNumber <= 1900) {
         Rarity = "Rare";
@@ -36,7 +36,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(rare.length) - 1;
         blook = rare[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else if (randomNumber <= 1980) {
         Rarity = "Epic";
@@ -44,7 +44,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(epic.length) - 1;
         blook = epic[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else if (randomNumber <= 1995) {
         Rarity = "Legendary";
@@ -52,7 +52,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(legendary.length) - 1;
         blook = legendary[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else if (randomNumber <= 1999) {
         Rarity = "Chroma";
@@ -60,7 +60,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(chroma.length) - 1;
         blook = chroma[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     else{
         Rarity = "Mystical";
@@ -68,7 +68,7 @@ document.getElementById("button").addEventListener("click", function() {
         let randomblook = rng(mystic.length) - 1;
         blook = mystic[randomblook];
         document.querySelector(".name").textContent = blook;
-        //document.querySelector(".blook").src = `images/${blook}.png`;
+        document.querySelector(".blook").src = `Blooks/${Rarity}/${blook}.png`;
     }
     document.querySelector(".rarity").textContent = Rarity;
 });

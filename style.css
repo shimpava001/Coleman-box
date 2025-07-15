@@ -124,6 +124,7 @@ body {
 .cover.trans{
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 .question{
     font-family: "Titan One", sans-serif;
@@ -138,13 +139,14 @@ body {
 }
 .blook{
     z-index: 1;
-    position: absolute;
+    width: 150px;
+    height: 150px;
 }
 .reveal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
   max-width: 280px;
   text-align: center;
   word-break: break-word;
@@ -168,55 +170,21 @@ body {
   max-width: 100%;
   word-break: break-word;
   line-height: 1.2;
+  margin: 0;
 }
 
 .rarity.green{
-    font-family: "Sebino Soft Medium", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color: green;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 24px;
-    z-index: 1;
-    position: absolute;
 }
 .rarity.blue{
-    font-family: "Sebino Soft Medium", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color: blue;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 24px;
-    z-index: 1;
-    position: absolute;
 }
 .rarity.red{
-    font-family: "Sebino Soft Medium", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color: red;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 24px;
-    z-index: 1;
-    position: absolute;
 }
 .rarity.orange{
-    font-family: "Sebino Soft Medium", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color: orange;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 24px;
-    z-index: 1;
-    position: absolute;
 }
 .rarity.white{
-    font-family: "Sebino Soft Medium", sans-serif;
-    font-weight: 500;
-    font-style: normal;
     color: white;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 24px;
-    z-index: 1;
-    position: absolute;
 }
