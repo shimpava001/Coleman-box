@@ -100,6 +100,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, background-color 1s, opacity 1s ease-in-out;
+}
+.cover.enlarged {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+.cover.white {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+.cover.trans{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 .question{
     font-family: "Titan One", sans-serif;
@@ -107,4 +120,8 @@ body {
     font-style: normal;
     color: white;
     font-size: 200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
