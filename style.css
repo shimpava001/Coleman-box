@@ -84,6 +84,7 @@ body {
 
 .open{
     display: none;
+    position: relative;
 }
 .open.active{
     display:flex;
@@ -101,6 +102,8 @@ body {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, background-color 1s, opacity 1s ease-in-out;
+    z-index: 2;
+    position: absolute;
 }
 .cover.enlarged {
     transform: scale(1.2);
@@ -124,4 +127,16 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.blook{
+    z-index: 1;
+    position: absolute;
+}
+.name{
+    z-index: 1;
+    position: absolute;
+}
+.rarity{
+    z-index: 1;
+    position: absolute;
 }

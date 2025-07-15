@@ -1,4 +1,5 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
+var noclick = false;
 
 function rng(num){ 
     return Math.floor(Math.random() * num) + 1;
@@ -18,6 +19,10 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 document.querySelector(".cover").addEventListener("click", async function() {
+    if (noclick){
+        return;
+    }
+    noclick = true;
     cover = document.querySelector(".cover");
     cover.classList.toggle("enlarged");
     await sleep(300);
