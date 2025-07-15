@@ -141,3 +141,54 @@ document.querySelector('.blook').addEventListener('click', function(e) {
         sound.play();
     }
 });
+
+
+// Import the functions you need from the SDKs you need
+import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBJ_TmAMEg9UchjS-pe5-uwPfcakwIvQxk",
+  authDomain: "userandpass-fc13f.firebaseapp.com",
+  projectId: "userandpass-fc13f",
+  storageBucket: "userandpass-fc13f.firebasestorage.app",
+  messagingSenderId: "1095463837266",
+  appId: "1:1095463837266:web:d9c34db0191eaefdac898b",
+  measurementId: "G-4Q46EWDRPQ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Initialize Firebase Auth
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+// Listen for auth state changes
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User signed in:", user.displayName);
+    // Load protected content or do whatever you need when user is logged in
+  } else {
+    console.log("No user signed in, redirecting to login...");
+    window.location.href = "login.html"; // Redirect if not signed in
+  }
+});
+
+// Function to trigger Google Sign-In (call this on button click)
+function signIn() {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log("Signed in as:", result.user.displayName);
+      window.location.href = "index.html"; // redirect after login
+    })
+    .catch((error) => {
+      console.error("Sign-in error:", error);
+    });
+}
