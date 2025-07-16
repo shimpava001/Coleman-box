@@ -174,6 +174,18 @@ document.querySelector(".cover").addEventListener("click", async function() {
 
     positionBurstArea();
     makeShapes(Rarity, 75);
+    if (blook === "The ragebaiting one") {
+        const domainvid = document.querySelector(".domainvid");
+        console.log("Ryōiki Tenkai");
+        domainvid.classList.add('active');
+        domainvid.muted = false; 
+        domainvid.play();
+    }
+    if (blook === "Adrian") {
+        console.log("EARTHQUAKE!!!");
+        document.body.classList.add('shake');
+        alert("EARTHQUAKE!!!");
+    }
     noclick = false;
     hasOpened = true;
 });
@@ -183,11 +195,18 @@ function closeModal() {
     const all = document.querySelector('.all');
     const open = document.querySelector('.open');
     const cover = document.querySelector('.cover');
+    const domainvid = document.querySelector('.domainvid');
     all.classList.remove('active');
     open.classList.remove('active');
     cover.classList.remove('trans');
     cover.classList.remove('white');
     cover.classList.remove('enlarged');
+    domainvid.classList.remove('active');
+    document.body.classList.remove('shake');
+    document.body.style.overflow = "";
+    domainvid.pause();
+    domainvid.muted = true; 
+    domainvid.currentTime = 0;
     rarity.classList.remove('green', 'blue', 'red', 'orange', 'cyan', 'mystic');
     document.querySelector('.blook').style.cursor = 'default';
     document.body.style.backgroundColor = '';
