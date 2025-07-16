@@ -189,6 +189,60 @@ body {
 .rarity.orange{
     color: orange;
 }
-.rarity.white{
-    color: white;
+.rarity.cyan{
+    color: cyan;
+}
+.rarity.mystic{
+    color: purple;
+}
+
+/* Chatgpt */
+
+@keyframes burstFly {
+  to {
+    transform: translate(var(--x), var(--y)) rotate(var(--rot));
+    opacity: 0;
+  }
+}
+
+
+#burstArea {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0; /* changed from 10 to 2 to be under .blook */
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+}
+
+.shape {
+  position: absolute;
+  width: var(--size, 50px);  /* default bigger */
+  height: var(--size, 50px);
+  background-color: var(--clr, hsl(200, 80%, 60%));
+  border-radius: var(--br, 6px);
+  animation-name: burstFly;
+  animation-duration: var(--dur, 3s);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: var(--triangle-size, 25px) solid transparent;
+  border-right: var(--triangle-size, 25px) solid transparent;
+  border-bottom: calc(var(--triangle-size, 25px) * 1.732) solid var(--clr, hsl(200, 80%, 60%));
+  position: absolute;
+  animation-name: burstFly;
+  animation-duration: var(--dur, 3s);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
 }

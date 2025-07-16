@@ -56,7 +56,7 @@ document.getElementById("button").addEventListener("click", function() {
     }
     else if (randomNumber <= 1999) {
         Rarity = "Chroma";
-        rarity.classList.add("white");
+        rarity.classList.add("cyan");
         let randomblook = rng(chroma.length) - 1;
         blook = chroma[randomblook];
         document.querySelector(".name").textContent = blook;
@@ -74,6 +74,86 @@ document.getElementById("button").addEventListener("click", function() {
     document.querySelector(".rarity").textContent = Rarity;
 });
 
+//chatgpt
+function makeShapes(rarity, count = 40) {
+  const burst = document.getElementById('burstArea');
+  if (!burst) return console.error('burstArea element not found');
+  const rand = (min, max) => Math.random() * (max - min) + min;
+  const shapes = ['circle', 'square', 'triangle'];
+
+  for (let i = 0; i < count; i++) {
+    const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+    const s = document.createElement('div');
+    const angle = rand(0, 2 * Math.PI);
+    const size = rand(30, 60);
+    const distance = rand(200, 350);
+    const dx = Math.cos(angle) * distance;
+    const dy = Math.sin(angle) * distance;
+    const rot = rand(-1.5, 1.5);
+    const dur = rand(2.5, 3); // faster burst
+
+    // Set CSS vars for animation
+    s.style.setProperty('--size', `${size}px`);
+    s.style.setProperty('--x', `${dx}px`);
+    s.style.setProperty('--y', `${dy}px`);
+    s.style.setProperty('--rot', `${rot}turn`);
+    s.style.setProperty('--dur', `${dur}s`);
+
+    // Random pastel-ish color, you can customize by rarity here:
+    let hue;
+    switch (rarity) {
+      case 'Uncommon': hue = rand(120, 160); break; // greenish
+      case 'Rare': hue = rand(200, 240); break;     // blueish
+      case 'Epic': hue = rand(0, 30); break;        // reddish
+      case 'Legendary': hue = rand(30, 60); break;  // orange/yellow
+      case 'Chroma': hue = rand(280, 320); break;   // purple/pink
+      case 'Mystic': hue = rand(180, 210); break;   // cyan
+      default: hue = rand(0, 360);
+    }
+    const color = `hsl(${hue}, 80%, 65%)`;
+    s.style.setProperty('--clr', color);
+
+    s.style.left = '50%';
+    s.style.top = '50%';
+
+    if (shapeType === 'circle') {
+      s.className = 'shape';
+      s.style.setProperty('--br', '50%');
+      s.style.backgroundColor = color;
+      s.style.backgroundImage = 'none';
+    } else if (shapeType === 'square') {
+      s.className = 'shape';
+      s.style.setProperty('--br', '6px');
+      s.style.backgroundColor = color;
+      s.style.backgroundImage = 'none';
+    } else if (shapeType === 'triangle') {
+      s.className = 'triangle';
+      s.style.setProperty('--triangle-size', `${size / 2}px`);
+      s.style.backgroundColor = 'transparent'; // triangles use border
+      s.style.borderBottomColor = color;
+    }
+
+    burst.appendChild(s);
+
+    s.addEventListener('animationend', () => s.remove(), { once: true });
+  }
+}
+
+
+function positionBurstArea() {
+  const blook = document.querySelector('.blook');
+  const burst = document.getElementById('burstArea');
+  const rect = blook.getBoundingClientRect();
+
+  // Position burstArea at the center of the .blook image
+  burst.style.top = `${rect.top + rect.height / 2}px`;
+  burst.style.left = `${rect.left + rect.width / 2}px`;
+  burst.style.transform = 'translate(-50%, -50%)';
+}
+
+
+
+//not chatgpt
 document.querySelector(".cover").addEventListener("click", async function() {
     if (noclick){
         return;
@@ -91,6 +171,9 @@ document.querySelector(".cover").addEventListener("click", async function() {
     cover.classList.toggle("white");
     await sleep(300);
     cover.classList.toggle("trans");
+
+    positionBurstArea();
+    makeShapes(Rarity, 75);
     noclick = false;
     hasOpened = true;
 });
@@ -105,11 +188,16 @@ function closeModal() {
     cover.classList.remove('trans');
     cover.classList.remove('white');
     cover.classList.remove('enlarged');
-    rarity.classList.remove('green', 'blue', 'red', 'orange', 'white', 'mystic');
+    rarity.classList.remove('green', 'blue', 'red', 'orange', 'cyan', 'mystic');
     document.querySelector('.blook').style.cursor = 'default';
     document.body.style.backgroundColor = '';
     noclick = false;
     hasOpened = false
+    const burst = document.getElementById('burstArea');
+    while (burst.firstChild) {
+        burst.removeChild(burst.firstChild);
+    }
+
 }
 
 document.querySelector('.open').addEventListener('click', function (e) {
