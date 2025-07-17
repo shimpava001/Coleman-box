@@ -37,29 +37,98 @@ body {
 .display{
     width: 1700px;
     height: 220px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
 }
 .bottom{
-    width: 1400px;
+    width: 1500px;
     height: 500px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);  
 }
+
+/* First Row */
+.firstrow{
+    gap: 20px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 35px;
+}
 .NPC.Suvan{
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
 }
 .Nerd.Sarvesh{
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
 }
 .Asian.Andrew{
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
 }
-.Cinaminate{
-    width: 150px;
-    height: 150px;
+.Micro.Lyric{
+    width: 125px;
+    height: 125px;
+}
+.Doge-shartinum{
+    width: 125px;
+    height: 125px;
+}
+.Julian{
+    width: 125px;
+    height: 125px;
+}
+.Oven{
+    width: 125px;
+    height: 125px;
+}
+.jjs.crying.Bruce{
+    width: 125px;
+    height: 125px;
+}
+.Cinnaminate{
+    width: 125px;
+    height: 125px;
+}
+.Jarden{
+    width: 125px;
+    height: 125px;
+}
+
+
+/* Second Row */
+.secondrow{
+    gap: 20px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 250px;
+}
+.Adrian{
+    width: 125px;
+    height: 125px;
+}
+.Femboy.Tucker{
+    width: 125px;
+    height: 125px;
+}
+.Mr\.Dail{
+    width: 125px;
+    height: 125px;
+}
+.Singing.Suvan{
+    width: 125px;
+    height: 125px;
+}
+.Kiwi{
+    width: 125px;
+    height: 125px;
+}
+.The.ragebaiting.one{
+    width: 125px;
+    height: 125px;
+}
+.Qintelligence.Penguin{
+    width: 125px;
+    height: 125px;
 }

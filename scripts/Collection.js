@@ -3,7 +3,7 @@ var blooks = [
   "Doge-shartinum", "Julian", "Oven", "jjs crying Bruce",
   "Cinaminate", "Jarden", "Adrian", "Femboy Tucker",
   "Mr.Dail", "Singing Suvan", "Kiwi", "The ragebaiting one",
-  "Qintellegence Penguin"
+  "Qintelligence Penguin"
 ];
 
 for (let i = 0; i < blooks.length; i++) {
@@ -17,6 +17,5 @@ for (let i = 0; i < blooks.length; i++) {
         if (blookImg) {
             blookImg.src = `Blooks/${Rarity}/${blookName}.png`;
         }
-
     }
 }
