@@ -40,12 +40,78 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .bottom{
     width: 1500px;
     height: 500px;
     border-radius: 10px;
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);  
+}
+@font-face {
+    font-family: "Sebino Soft Medium";
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot");
+    src: url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/77f6ecce8b3e56796f721316092c7e87.svg#Sebino Soft Medium")format("svg");
+}
+.SelectBlook{
+    width: 175px;
+    height: 175px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display:none;
+    cursor: default;
+}
+.SelectBlook.owned {
+    display: block;
+}
+.blookselect{
+    font-family: "Sebino Soft Medium", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 40px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    gap: 20px;
+    margin-left: 20px;
+}
+.rarity {
+  font-size: 30px;
+  font-family: "Sebino Soft Medium", sans-serif;
+  color: green;
+  -webkit-text-stroke: 0.5px black;
+  max-width: 100%;
+  word-break: break-word;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.rarity.uncommon{
+    color: green;
+}
+.rarity.rare{
+    color: blue;
+}
+.rarity.epic{
+    color: red;
+}
+.rarity.legendary{
+    color: orange;
+}
+.rarity.chroma{
+    color: cyan;
+}
+.rarity.mystic{
+    color: purple;
 }
 
 /* First Row */
@@ -58,6 +124,7 @@ body {
 .NPC.Suvan{
     width: 125px;
     height: 125px;
+    
 }
 .Nerd.Sarvesh{
     width: 125px;
@@ -131,4 +198,8 @@ body {
 .Qintelligence.Penguin{
     width: 125px;
     height: 125px;
+}
+
+img.owned {
+  cursor: pointer;
 }
