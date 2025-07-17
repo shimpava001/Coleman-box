@@ -1,0 +1,65 @@
+body {
+  margin: 0;  
+}
+.topbar{
+    width:auto;
+    background-color: #9C27B0;
+    height:54px;
+    box-shadow: 0 8px 6px -4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.info-image{
+    height:36px;
+    margin-top: 5px;
+}
+.Collection-image{
+    height:36px;
+    margin-top: 5px;
+}
+.titan-one-regular {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 36px;
+  margin-left: 30px;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.display{
+    width: 1700px;
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+.bottom{
+    width: 1400px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);  
+}
+.NPC.Suvan{
+    width: 150px;
+    height: 150px;
+}
+.Nerd.Sarvesh{
+    width: 150px;
+    height: 150px;
+}
+.Asian.Andrew{
+    width: 150px;
+    height: 150px;
+}
+.Cinaminate{
+    width: 150px;
+    height: 150px;
+}

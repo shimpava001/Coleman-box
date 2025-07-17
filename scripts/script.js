@@ -8,6 +8,7 @@ var mystic = ["Qintellegence Penguin"]
 var noclick = false;
 let hasOpened = false;
 var rarity = null;
+var savedBlooks
 
 function rng(num){ 
     return Math.floor(Math.random() * num) + 1;
@@ -72,6 +73,14 @@ document.getElementById("button").addEventListener("click", function() {
         document.querySelector('.blook').style.cursor = 'pointer';
     }
     document.querySelector(".rarity").textContent = Rarity;
+    savedBlooks = localStorage.getItem(blook);
+    if (savedBlooks === blook) {
+        console.log("You already have this blook!");
+        return;
+    }
+    else {
+      localStorage.setItem(blook, Rarity);
+    }
 });
 
 //chatgpt
