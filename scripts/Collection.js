@@ -1,7 +1,7 @@
 var blooks = [
   "NPC Suvan", "Nerd Sarvesh", "Asian Andrew", "Micro Lyric",
   "Doge-shartinum", "Julian", "Oven", "jjs crying Bruce",
-  "Cinaminate", "Jarden", "Adrian", "Femboy Tucker",
+  "Cinaminate", "Phantom Jawdan", "Adrian", "Femboy Tucker",
   "Mr.Dail", "Singing Suvan", "Kiwi", "The ragebaiting one",
   "Qintelligence Penguin"
 ];

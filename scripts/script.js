@@ -1,6 +1,6 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 var uncommon = ["NPC Suvan", "Nerd Sarvesh", "Asian Andrew", "Micro Lyric", "Doge-shartinum", "Julian"]
-var rare = ["Oven", "jjs crying Bruce", "Cinaminate", "Jarden"]
+var rare = ["Oven", "jjs crying Bruce", "Cinaminate", "Phantom Jawdan"]
 var epic = ["Adrian", "Femboy Tucker"]
 var legendary = ["Mr.Dail"]
 var chroma = ["Singing Suvan", "Kiwi", "The ragebaiting one"]

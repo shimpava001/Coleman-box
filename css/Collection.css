@@ -116,88 +116,94 @@ body {
 
 /* First Row */
 .firstrow{
-    gap: 20px;
     display: flex;
     margin-top: 20px;
     margin-left: 35px;
+    gap: 3px;
 }
 .NPC.Suvan{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
     
 }
 .Nerd.Sarvesh{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }
 .Asian.Andrew{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }
 .Micro.Lyric{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }
 .Doge-shartinum{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }
 .Julian{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
 }
 .Oven{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .jjs.crying.Bruce{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Cinaminate{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
-.Jarden{
-    width: 125px;
-    height: 125px;
+.Phantom.Jawdan{
+    width: 140px;
+    height: 140px;
 }
 
 
 /* Second Row */
 .secondrow{
-    gap: 20px;
+    gap: 3px;
     display: flex;
     margin-top: 20px;
     margin-left: 250px;
 }
 .Adrian{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Femboy.Tucker{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Mr\.Dail{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Singing.Suvan{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Kiwi{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .The.ragebaiting.one{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 .Qintelligence.Penguin{
-    width: 125px;
-    height: 125px;
+    width: 140px;
+    height: 140px;
 }
 
 img.owned {
